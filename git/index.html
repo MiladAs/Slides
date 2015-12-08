@@ -1,0 +1,1376 @@
+<html style="height: 100%;"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Git Version Control - Milad As</title>
+
+<meta name="description" content="TODO">
+<meta name="author" content="TODO">
+
+<style>
+.componentContainer {
+    position: absolute;
+    line-height: normal;
+    /*-webkit-transform-origin: 135% 135%;
+    -moz-transform-origin: 135% 135%;
+    transform-origin: 135% 135%;*/
+}
+
+.transformContainer {
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+}
+</style>
+
+<link rel="stylesheet" href="Deck%20Title_files/default-reset.css">
+<link href="Deck%20Title_files/main.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="Deck%20Title_files/default.css" id="theme">
+<link href="Deck%20Title_files/web-fonts.css" rel="stylesheet" type="text/css">
+<link href="Deck%20Title_files/backgroundClasses.css" rel="stylesheet" type="text/css">
+<link href="Deck%20Title_files/surfaceClasses.css" rel="stylesheet" type="text/css">
+
+<style>
+.reveal.themedArea {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+
+<script src="Deck%20Title_files/analytics.js" async=""></script><script type="text/javascript" src="Deck%20Title_files/dataset-shim.js"></script>
+<script type="text/javascript" src="Deck%20Title_files/impress.js"></script>
+
+<script src="Deck%20Title_files/onready.js"></script>
+<script src="Deck%20Title_files/loadPresentation.js"></script>
+<script>
+ready(function() {
+    if (document.getElementById('launched-placeholder'))
+        loadPresentation();
+
+    if (!window.presStarted) {
+        startPres(document, window);
+        impress().init();   
+    }
+
+    if ("ontouchstart" in document.documentElement) { 
+        document.querySelector(".hint").innerHTML = 
+            "<p>Tap on the left or right to navigate</p>";
+    }
+});
+</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-42322531-1', 'strut.io');
+    ga('send', 'pageview');
+    </script>
+</head>
+<body style="height: 100%; overflow: hidden;" class="impress-supported impress-enabled">
+<style type="text/css">
+
+</style>
+<style>
+
+</style>
+<style>
+
+
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+</style>
+<!-- This is a work around / hack to get the user's browser to download the fonts 
+ if they decide to save the presentation. -->
+<div style="visibility: hidden; width: 0px; height: 0px">
+<img src="Deck%20Title_files/Lato-Bold.bin">
+<img src="Deck%20Title_files/HammersmithOne.bin">
+<img src="Deck%20Title_files/Droid-Sans-Mono.bin">
+<img src="Deck%20Title_files/Gorditas-Regular.bin">
+<img src="Deck%20Title_files/FredokaOne-Regular.bin">
+<img src="Deck%20Title_files/Ubuntu.bin">
+<img src="Deck%20Title_files/Ubuntu-Bold.bin">
+<img src="Deck%20Title_files/PressStart2P-Regular.bin">
+<img src="Deck%20Title_files/Lato-BoldItalic.bin">
+<img src="Deck%20Title_files/AbrilFatface-Regular.bin">
+<img src="Deck%20Title_files/Lato-Regular.bin">
+</div>
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div class="bg  strut-surface">
+<div class="bg innerBg strut-slide-0">
+<div style="position: absolute; transform-origin: left top 0px; transition: all 0ms ease-in-out 0ms; transform-style: preserve-3d; top: 50%; left: 50%; transform: perspective(3067.91px) scale(0.325955);" id="impress"><div style="position: absolute; transform-origin: left top 0px; transition: all 0ms ease-in-out 0ms; transform-style: preserve-3d; transform: rotateZ(0deg) rotateY(0deg) rotateX(0deg) translate3d(-2457.6px, -2764.8px, 0px);">
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(2457.6px, 2764.8px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-1" class="step active present" data-state="strut-slide-0" data-x="2457.6" data-y="2764.8" data-scale="3">
+			<div class=" slideContainer strut-slide-0" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(6280.53px, 2764.8px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-2" class="step future" data-state="strut-slide-1" data-x="6280.533333333334" data-y="2764.8" data-scale="3">
+			<div class=" slideContainer strut-slide-1" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 315px; left: 492px; -webkit-transform: rotate(0.01rad)  ; -moz-transform: rotate(0.01rad)  ; transform: rotate(0.01rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 56px;" class="antialias">
+Milad Abolhassani<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 399px; left: 605px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 41px;" class="antialias">
+milad@tuxgeek.ir<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 468px; left: 494px; -webkit-transform: rotate(0.05rad)  ; -moz-transform: rotate(0.05rad)  ; transform: rotate(0.05rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 47px;" class="antialias">
+miladas.github.io/slides<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 49px; left: 541px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 407px; height: 169.96px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.45, 0.45);
+-moz-transform: scale(0.45, 0.45);
+transform: scale(0.45, 0.45)">
+<img src="Deck%20Title_files/Git-Logo-1788C.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 339px; left: -8px; -webkit-transform: rotate(-0.25rad)  ; -moz-transform: rotate(-0.25rad)  ; transform: rotate(-0.25rad)  ; width: 489px; height: 406.48px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.61, 0.61);
+-moz-transform: scale(0.61, 0.61);
+transform: scale(0.61, 0.61)">
+<img src="Deck%20Title_files/Octocat.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 529px; left: 565px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+tuxgeek.ir
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 46px; left: 82px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 398px; height: 256.81px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.51, 0.51);
+-moz-transform: scale(0.51, 0.51);
+transform: scale(0.51, 0.51)">
+<img src="Deck%20Title_files/branching-illustration2x.png">
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(10103.5px, 2764.8px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-3" class="step future" data-state="strut-slide-2" data-x="10103.466666666667" data-y="2764.8" data-scale="3">
+			<div class=" slideContainer strut-slide-2" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 63px; left: 89px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 62px;" class="antialias">
+What is a version control?
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 194px; left: 196px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 649px; height: 418.76px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.83, 0.83);
+-moz-transform: scale(0.83, 0.83);
+transform: scale(0.83, 0.83)">
+<img src="Deck%20Title_files/branching-illustration2x.png">
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(13926.4px, 2764.8px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-4" class="step future" data-state="strut-slide-3" data-x="13926.4" data-y="2764.8" data-scale="3">
+			<div class=" slideContainer strut-slide-3" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 16px; left: 28px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 55px;" class="antialias">
+Why Use a Version Control System?<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 161px; left: 141px; -webkit-transform: rotate(-0.05rad)  ; -moz-transform: rotate(-0.05rad)  ; transform: rotate(-0.05rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 42px;" class="antialias">
+<ul><li>Collaboration</li><li>Storing Versions (Properly)</li><li>Restoring Previous Versions</li><li>Understanding What Happened</li><li>Backup</li></ul>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 381px; left: 644px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<img src="Deck%20Title_files/Why-Pic.png">
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(17749.3px, 2764.8px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-5" class="step future" data-state="strut-slide-4" data-x="17749.333333333332" data-y="2764.8" data-scale="3">
+			<div class=" slideContainer strut-slide-4" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 62px; left: 81px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+Who? Why? When? Which?<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 185px; left: 328px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<img src="Deck%20Title_files/folder.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 237px; left: 467px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 36px;" class="antialias">
+12-4-15<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 356px; left: 267px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<img src="Deck%20Title_files/folder.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 408px; left: 410px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 36px;" class="antialias">
+new
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 317px; left: 473px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 108px; height: 108px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.84, 0.84);
+-moz-transform: scale(0.84, 0.84);
+transform: scale(0.84, 0.84)">
+<img src="Deck%20Title_files/folder.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 363px; left: 598px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 28px;" class="antialias">
+new-2
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 330px; left: 797px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 108px; height: 108px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.84, 0.84);
+-moz-transform: scale(0.84, 0.84);
+transform: scale(0.84, 0.84)">
+<img src="Deck%20Title_files/folder.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 374px; left: 917px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 28px;" class="antialias">
+final
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 435px; left: 652px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 108px; height: 108px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.84, 0.84);
+-moz-transform: scale(0.84, 0.84);
+transform: scale(0.84, 0.84)">
+<img src="Deck%20Title_files/folder.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 481px; left: 777px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 28px;" class="antialias">
+copy of final<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 465px; left: 443px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 108px; height: 108px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.84, 0.84);
+-moz-transform: scale(0.84, 0.84);
+transform: scale(0.84, 0.84)">
+<img src="Deck%20Title_files/folder.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 513px; left: 560px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 28px;" class="antialias">
+final2<br><br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 210px; left: 685px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 108px; height: 108px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.84, 0.84);
+-moz-transform: scale(0.84, 0.84);
+transform: scale(0.84, 0.84)">
+<img src="Deck%20Title_files/folder.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 255px; left: 801px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 28px;" class="antialias">
+last change<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 564px; left: 594px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<img src="Deck%20Title_files/folder.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 616px; left: 737px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 36px;" class="antialias">
+final of finals<br>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(21572.3px, 2764.8px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-6" class="step future" data-state="strut-slide-5" data-x="21572.266666666666" data-y="2764.8" data-scale="3">
+			<div class=" slideContainer strut-slide-5" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 38px; left: 34px; -webkit-transform: rotate(-0.06rad)  ; -moz-transform: rotate(-0.06rad)  ; transform: rotate(-0.06rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+Why Git?
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 172px; left: 96px; -webkit-transform: rotate(-0.02rad)  ; -moz-transform: rotate(-0.02rad)  ; transform: rotate(-0.02rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 37px;" class="antialias">
+Fast<br>Clean<br>Smart<br>Content base<br>Archived<br>Everything is local<br>Features<br>Free Software<br><br>Goals...<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 373px; left: 722px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<img src="Deck%20Title_files/Why-Pic.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 87px; left: 483px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 35px;" class="antialias">
+Lot of free servers<br>Collaborate in free projects<br>Contribute &amp; Share<br>Control<br>Future code!?<br>It's a file system<br>Time machine<br>Fork &amp; Pull<br>Control Access<br>Secure Access<br>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(6307.84px, 6082.56px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-7" class="step future" data-state="strut-slide-6" data-x="6307.84" data-y="6082.56" data-scale="3">
+			<div class=" slideContainer strut-slide-6" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 151px; left: 113px; -webkit-transform: rotate(-0.05rad)  ; -moz-transform: rotate(-0.05rad)  ; transform: rotate(-0.05rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 53px;" class="antialias">
+<ul><li>Fast</li><li>Safe</li><li>Distributed</li><li>Against CVS Project</li></ul>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 37px; left: 187px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+Linux developments
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 364px; left: 594px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 375px; height: 314.38px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.51, 0.51);
+-moz-transform: scale(0.51, 0.51);
+transform: scale(0.51, 0.51)">
+<img src="Deck%20Title_files/5409777dd732a89a3df95126_goals.png">
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(10144.4px, 6021.12px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-8" class="step future" data-state="strut-slide-7" data-x="10144.426666666666" data-y="6021.12" data-scale="3">
+			<div class=" slideContainer strut-slide-7" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 50px; left: 95px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 43px;" class="antialias">
+No central server required<br>Each user has an independent copy <br>Do whatever whenever you want<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 242px; left: 260px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 38px;" class="antialias">
+Internet?<br>get, revert, history, etc. you have to be online
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 400px; left: 393px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<img src="Deck%20Title_files/icon-design.png">
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(13994.7px, 5852.16px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-9" class="step future" data-state="strut-slide-8" data-x="13994.666666666666" data-y="5852.16" data-scale="3">
+			<div class=" slideContainer strut-slide-8" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 108.99px; left: 84.99px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 407px; height: 169.96px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.45, 0.45);
+-moz-transform: scale(0.45, 0.45);
+transform: scale(0.45, 0.45)">
+<img src="Deck%20Title_files/Git-Logo-1788C.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 262px; left: 428px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+git-scm.com
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 384px; left: 132px; -webkit-transform: rotate(0.11rad)  ; -moz-transform: rotate(0.11rad)  ; transform: rotate(0.11rad)  ; width: 289px; height: 289px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.48, 0.48);
+-moz-transform: scale(0.48, 0.48);
+transform: scale(0.48, 0.48)">
+<img src="Deck%20Title_files/arch.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 481px; left: 399px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 24px;" class="antialias">
+<font face="'PressStart2P', cursive"><font face="'PressStart2P', cursive">pacman -S git<br>apt-get<br>yum</font><br></font>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(17858.6px, 5652.48px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-10" class="step future" data-state="strut-slide-9" data-x="17858.56" data-y="5652.48" data-scale="3">
+			<div class=" slideContainer strut-slide-9" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 139px; left: 67px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 891px; height: 491.05px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.74, 0.74);
+-moz-transform: scale(0.74, 0.74);
+transform: scale(0.74, 0.74)">
+<img src="Deck%20Title_files/areas.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 104px; left: 394px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 20px;" class="antialias">
+<font color="#8a8686"><i>Working on different things...<br></i></font>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(21476.7px, 5729.28px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-11" class="step future" data-state="strut-slide-10" data-x="21476.693333333333" data-y="5729.28" data-scale="3">
+			<div class=" slideContainer strut-slide-10" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 42px; left: 68px; -webkit-transform: rotate(-0.05rad)  ; -moz-transform: rotate(-0.05rad)  ; transform: rotate(-0.05rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+Commit
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 525px; left: 375px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 24px;" class="antialias">
+<i>Hint: One thing&nbsp; Per Commit<br></i>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 435px; left: 381px; -webkit-transform: rotate(0.06rad)  ; -moz-transform: rotate(0.06rad)  ; transform: rotate(0.06rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 16px;" class="antialias">
+Fix Bug#12 - Core Template Engine<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 217px; left: 386px; -webkit-transform: rotate(-0.05rad)  ; -moz-transform: rotate(-0.05rad)  ; transform: rotate(-0.05rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<img src="Deck%20Title_files/plainicon.png">
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(2484.91px, 6190.08px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-12" class="step future" data-state="strut-slide-11" data-x="2484.9066666666668" data-y="6190.08" data-scale="3">
+			<div class=" slideContainer strut-slide-11" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 60px; left: 59px; -webkit-transform: rotate(-0.05rad)  ; -moz-transform: rotate(-0.05rad)  ; transform: rotate(-0.05rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+Branch <br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 409px; left: 129px; -webkit-transform: rotate(-0.12rad)  ; -moz-transform: rotate(-0.12rad)  ; transform: rotate(-0.12rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 31px;" class="antialias">
+<ul><li>Hot fix</li><li>Bug fix (lot of commit)<br></li><li>Crazy things (Test)<br></li><li>Features</li><li>Easy Drop, Undo<br></li><li>Keep stable code separate<br></li><li>etc</li></ul>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 179px; left: 115px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<img src="Deck%20Title_files/1uFFmSN.png">
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(6335.15px, 9077.76px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-13" class="step future" data-state="strut-slide-12" data-x="6335.1466666666665" data-y="9077.76" data-scale="3">
+			<div class=" slideContainer strut-slide-12" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 228px; left: 343px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 345px; height: 299.68px;">
+<div class="transformContainer" style="-webkit-transform: scale(1.46, 1.46);
+-moz-transform: scale(1.46, 1.46);
+transform: scale(1.46, 1.46)">
+<img src="Deck%20Title_files/git-tutorial_branching-merge.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 42px; left: 68px; -webkit-transform: rotate(-0.05rad)  ; -moz-transform: rotate(-0.05rad)  ; transform: rotate(-0.05rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+Merge<br>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(2757.97px, 11520px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-14" class="step future" data-state="strut-slide-13" data-x="2757.9733333333334" data-y="11520" data-scale="3">
+			<div class=" slideContainer strut-slide-13" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 42px; left: 68px; -webkit-transform: rotate(-0.05rad)  ; -moz-transform: rotate(-0.05rad)  ; transform: rotate(-0.05rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+Revert &amp; Reset<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 212px; left: 342px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 341px; height: 343.89px;">
+<div class="transformContainer" style="-webkit-transform: scale(1.44, 1.44);
+-moz-transform: scale(1.44, 1.44);
+transform: scale(1.44, 1.44)">
+<img src="Deck%20Title_files/git-tutorial_revert-vs-reset.png">
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(2676.05px, 8893.44px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-15" class="step future" data-state="strut-slide-14" data-x="2676.0533333333333" data-y="8893.44" data-scale="3">
+			<div class=" slideContainer strut-slide-14" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer" style="top: 62px; left: 190px; width: 644.3426832796966px; height: 644.3426832796966px;">
+<div class="transformContainer" style="-webkit-transform: scale(, );
+-moz-transform: scale(, );
+transform: scale(, )">
+<img src="Deck%20Title_files/02.svg" style="width: 100%; height: 100%">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 42px; left: 68px; -webkit-transform: rotate(-0.05rad)  ; -moz-transform: rotate(-0.05rad)  ; transform: rotate(-0.05rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+Rebase<br>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(10185.4px, 8801.28px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-16" class="step future" data-state="strut-slide-15" data-x="10185.386666666667" data-y="8801.28" data-scale="3">
+			<div class=" slideContainer strut-slide-15" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 131px; left: 305px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 580px; height: 338.33px;">
+<div class="transformContainer" style="-webkit-transform: scale(1.21, 1.21);
+-moz-transform: scale(1.21, 1.21);
+transform: scale(1.21, 1.21)">
+<img src="Deck%20Title_files/12-3.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 474px; left: 110px; -webkit-transform: rotate(-0.1rad)  ; -moz-transform: rotate(-0.1rad)  ; transform: rotate(-0.1rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 33px;" class="antialias">
+<font face="'Droid Sans Mono', monospace"># hash-object<br><font face="'Droid Sans Mono', monospace">#</font> cat-file<br><font face="'Droid Sans Mono', monospace"># <font face="'Droid Sans Mono', monospace">co<font face="'Droid Sans Mono', monospace">unt-objects</font></font></font><br></font>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 42px; left: 68px; -webkit-transform: rotate(-0.05rad)  ; -moz-transform: rotate(-0.05rad)  ; transform: rotate(-0.05rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+Head And References<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 643px; left: 272px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 24px;" class="antialias">
+c8a1ea343ef0d1706f14ccdaa17f9e1e87737968
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 521px; left: 560px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 24px;" class="antialias">
+<div align="center"><font color="#8a8686"><i>Clean - Smart - Content base - Archived</i></font></div>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(13994.7px, 8785.92px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-17" class="step future" data-state="strut-slide-16" data-x="13994.666666666666" data-y="8785.92" data-scale="3">
+			<div class=" slideContainer strut-slide-16" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 40px; left: 53px; -webkit-transform: rotate(-0.1rad)  ; -moz-transform: rotate(-0.1rad)  ; transform: rotate(-0.1rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+Fast Forward<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 149px; left: 229px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 33px;" class="antialias">
+<i>There is nothing to integrate, It's just shift the head<br></i>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 254px; left: 352px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<img src="Deck%20Title_files/git-tutorial_merge-fast-forward.png">
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(17763px, 8770.56px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-18" class="step future" data-state="strut-slide-17" data-x="17762.986666666668" data-y="8770.56" data-scale="3">
+			<div class=" slideContainer strut-slide-17" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 41px; left: 68px; -webkit-transform: rotate(-0.05rad)  ; -moz-transform: rotate(-0.05rad)  ; transform: rotate(-0.05rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+.gitignore
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 226px; left: 254px; -webkit-transform: rotate(-0.06rad)  ; -moz-transform: rotate(-0.06rad)  ; transform: rotate(-0.06rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 24px;" class="antialias">
+https://github.com/github/gitignore
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 311px; left: 590px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 265px; height: 265px;">
+<div class="transformContainer" style="-webkit-transform: scale(1.33, 1.33);
+-moz-transform: scale(1.33, 1.33);
+transform: scale(1.33, 1.33)">
+<img src="Deck%20Title_files/11957-200.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 364px; left: 852px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 21px;" class="antialias">
+<i>Pattern</i>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(21585.9px, 8601.6px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-19" class="step future" data-state="strut-slide-18" data-x="21585.92" data-y="8601.6" data-scale="3">
+			<div class=" slideContainer strut-slide-18" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 24px; left: 26px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 66px;" class="antialias">
+Lets Start...<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 181px; left: 201px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 423px; height: 176.64px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.46, 0.46);
+-moz-transform: scale(0.46, 0.46);
+transform: scale(0.46, 0.46)">
+<img src="Deck%20Title_files/Git-Logo-Black.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 444px; left: 394px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<img src="Deck%20Title_files/icon_terminal.png">
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(25149.4px, 2672.64px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-20" class="step future" data-state="strut-slide-19" data-x="25149.44" data-y="2672.64" data-scale="3">
+			<div class=" slideContainer strut-slide-19" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 60px; left: 97px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 51px;" class="antialias">
+Github<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 160px; left: 447px; -webkit-transform: rotate(0.02rad)  ; -moz-transform: rotate(0.02rad)  ; transform: rotate(0.02rad)  ; width: 489px; height: 406.48px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.61, 0.61);
+-moz-transform: scale(0.61, 0.61);
+transform: scale(0.61, 0.61)">
+<img src="Deck%20Title_files/Octocat.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 156px; left: 193px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 33px;" class="antialias">
+<ul><li>Pages</li><li>Clone<br></li><li>Repositories</li><li>Fork</li><li>Pull Request<br></li><li>SSH</li><li>Wiki</li><li>Bug Tracker<br></li></ul>
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(25340.6px, 5498.88px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-21" class="step future" data-state="strut-slide-20" data-x="25340.586666666666" data-y="5498.88" data-scale="3">
+			<div class=" slideContainer strut-slide-20" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 10px; left: 326px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 660px; height: 244.64px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.59, 0.59);
+-moz-transform: scale(0.59, 0.59);
+transform: scale(0.59, 0.59)">
+<img src="Deck%20Title_files/bitbucket-67ee1f78cee3c1ea684ae35b00a48050.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 217px; left: 83px; -webkit-transform: rotate(0.07rad)  ; -moz-transform: rotate(0.07rad)  ; transform: rotate(0.07rad)  ; width: 584px; height: 207.62px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.2, 0.2);
+-moz-transform: scale(0.2, 0.2);
+transform: scale(0.2, 0.2)">
+<img src="Deck%20Title_files/277d9badcbd723e913b3a41e64e8d2f3d2c80598.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 409px; left: 213px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 749px; height: 277.63px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.67, 0.67);
+-moz-transform: scale(0.67, 0.67);
+transform: scale(0.67, 0.67)">
+<img src="Deck%20Title_files/github-bb449e0ffbacbcb7f9c703db85b1cf0b.png">
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(25204.1px, 8325.12px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-22" class="step future" data-state="strut-slide-21" data-x="25204.053333333333" data-y="8325.12" data-scale="3">
+			<div class=" slideContainer strut-slide-21" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 62px; left: 613px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 370px; height: 488.4px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.74, 0.74);
+-moz-transform: scale(0.74, 0.74);
+transform: scale(0.74, 0.74)">
+<img src="Deck%20Title_files/progit2.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 76px; left: 83px; -webkit-transform: rotate(-0.16rad)  ; -moz-transform: rotate(-0.16rad)  ; transform: rotate(-0.16rad)  ; width: 309px; height: 256.86px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.39, 0.39);
+-moz-transform: scale(0.39, 0.39);
+transform: scale(0.39, 0.39)">
+<img src="Deck%20Title_files/Octocat.png">
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 195px; left: 314px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 53px;" class="antialias">
+try git<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 352px; left: 176px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 24px;" class="antialias">
+https://try.github.io/
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 481px; left: 148px; -webkit-transform: rotate(-0.05rad)  ; -moz-transform: rotate(-0.05rad)  ; transform: rotate(-0.05rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 24px;" class="antialias">
+https://git-scm.com/book
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 523px; left: 245px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 24px;" class="antialias">
+https://atlassian.com/git
+</div>
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(28781.2px, 2611.2px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-23" class="step future" data-state="strut-slide-22" data-x="28781.226666666666" data-y="2611.2" data-scale="3">
+			<div class=" slideContainer strut-slide-22" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer" style="top: 19px; left: 54px; width: 934.8357809338796px; height: 660.9613624768481px;">
+<div class="transformContainer" style="-webkit-transform: scale(, );
+-moz-transform: scale(, );
+transform: scale(, )">
+<img src="Deck%20Title_files/git-cheat-sheet.svg" style="width: 100%; height: 100%">
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+		
+			<div style="position: absolute; transform: translate(-50%, -50%) translate3d(29259.1px, 8048.64px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(3); transform-style: preserve-3d;" id="step-24" class="step future" data-state="strut-slide-23" data-x="29259.093333333334" data-y="8048.64" data-scale="3">
+			<div class=" slideContainer strut-slide-23" style="width: 1024px; height: 768px;">
+			<div class="themedArea">
+			
+			</div>
+			
+			<div class="componentContainer " style="top: 42px; left: 590px; -webkit-transform: rotate(0.05rad)  ; -moz-transform: rotate(0.05rad)  ; transform: rotate(0.05rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 92px;" class="antialias">
+<i>Thank You<br></i>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 315px; left: 492px; -webkit-transform: rotate(0.01rad)  ; -moz-transform: rotate(0.01rad)  ; transform: rotate(0.01rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 56px;" class="antialias">
+Milad Abolhassani<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 315px; left: 492px; -webkit-transform: rotate(0.01rad)  ; -moz-transform: rotate(0.01rad)  ; transform: rotate(0.01rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 56px;" class="antialias">
+Milad Abolhassani<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 315px; left: 492px; -webkit-transform: rotate(0.01rad)  ; -moz-transform: rotate(0.01rad)  ; transform: rotate(0.01rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 56px;" class="antialias">
+Milad Abolhassani<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 399px; left: 605px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 41px;" class="antialias">
+milad@tuxgeek.ir<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 468px; left: 494px; -webkit-transform: rotate(0.05rad)  ; -moz-transform: rotate(0.05rad)  ; transform: rotate(0.05rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 47px;" class="antialias">
+miladas.github.io/slides<br>
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 529px; left: 565px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+tuxgeek.ir
+</div>
+</div>
+</div>
+			
+			<div class="componentContainer " style="top: 106.86px; left: 60px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 423px; height: 176.64px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.46, 0.46);
+-moz-transform: scale(0.46, 0.46);
+transform: scale(0.46, 0.46)">
+<img src="Deck%20Title_files/Git-Logo-Black.png">
+</div>
+</div>
+			
+			</div>
+		
+		</div>
+	
+	<div style="position: absolute; transform: translate(-50%, -50%) translate3d(15858.3px, 7065.6px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(9); transform-style: preserve-3d;" id="overview" class="step future" data-state="strut-slide-overview" data-x="15858.346666666666" data-y="7065.6" data-scale="9"></div>
+	
+</div></div>
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+</div>
+</div></body></html>
