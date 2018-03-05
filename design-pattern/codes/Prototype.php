@@ -1,9 +1,12 @@
 <?php 
 
-// Milad As
-// milad@tuxgeek.ir
-// Design Pattern Basics
-// Prototype Pattern
+/*
+  By: Ravexina (Milad As)
+  --: Design Pattern Basics
+  --: Prototype Pattern
+    : https://github.com/ravexina
+    : https://github.com/ravexina/slides
+*/
 
 class clone_factory{
 	public static function make_copy($object)

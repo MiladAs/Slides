@@ -1,10 +1,13 @@
 <?php
 
-// Milad As
-// milad@tuxgeek.ir
-// Design Pattern Basics
-// Strategy Pattern
-// Base idea from newthinkthank
+/*
+  By: Ravexina (Milad As)
+  --: Design Pattern Basics
+  --: Strategy Pattern
+  --: Base idea from newthinkthank
+    : https://github.com/ravexina
+    : https://github.com/ravexina/slides
+*/
 
 class animal{
 	private $name;

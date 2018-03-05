@@ -1,9 +1,12 @@
 <?php
 
-// Milad As
-// milad@tuxgeek.ir
-// Design Pattern Basics
-// Singleton Pattern
+/*
+  By: Ravexina (Milad As)
+  --: Design Pattern Basics
+  --: Singleton Pattern
+    : https://github.com/ravexina
+    : https://github.com/ravexina/slides
+*/
 
 class singleton{
 	

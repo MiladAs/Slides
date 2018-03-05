@@ -1,10 +1,12 @@
 <?php
 
-// Milad As
-// milad@tuxgeek.ir
-// Design Pattern Basics
-// Adapter Pattern
-// 
+/*
+  By: Ravexina (Milad As)
+  --: Design Pattern Basics
+  --: Adapter Pttern
+    : https://github.com/ravexina
+    : https://github.com/ravexina/slides
+*/
 
 /// -----------------
 
