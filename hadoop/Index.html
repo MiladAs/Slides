@@ -1,0 +1,655 @@
+  <!doctype html>
+<html lang="en">	
+<head>
+<meta charset="utf-8">
+<title>Hadoop - Milad As (Ravexina) - miald@tuxgeek.ir</title>
+<link rel="stylesheet" href="css/reveal.css">
+<link rel="stylesheet" href="css/theme/league.css" id="theme">
+<!--Add support for earlier versions of Internet Explorer -->
+<!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+
+<!-- --------------------------------------------- -->
+<!-- Author: 	Miald As -->
+<!-- Email:  	Milad[dot]As [at] tuxgeek [dot] ir -->
+<!-- Website: 	tuxgeek.ir -->
+<!-- Title: 	Hadoop -->
+<!-- Date: 	15 Dec 2018 -->
+<!-- --------------------------------------------- -->
+
+</head>
+ 
+<body>
+<!-- Wrap the entire slide show in a div using the "reveal" class. -->
+<div class="reveal">
+	<!-- Wrap all slides in a single "slides" class -->
+	<div class="slides">
+	 
+		<!-- ALL SLIDES GO HERE -->
+		<!-- Each section element contains an individual slide -->
+
+		<!-- Configuration Slides -->
+		<section>
+
+		<section data-transition="zoom" id="dideh">
+      <img style="width:70%" src="./imgs/phil.jpg" >
+      <p>دیدنش با چشم چون ممکن نبود - اندر آن تاریکیش کف می‌بسود</p>
+      <sub>مولانا</sub>
+		</section>
+
+    <section data-transition="zoom" id="dideh2">
+      <img style="width:70%" src="./imgs/phil2.jpeg" >
+		</section>
+
+		<section data-transition="convex" id="title">
+			<h1>Introduction to Hadoop</h1>
+			<p>Big Data, Hadoop & more</p>
+			<aside class="notes">Milad As (Ravexina), milad (𝔸) tuxgeek (dot) ir</aside>
+		</section>		
+
+		<section data-transition="concave" id="what">
+      <img style="width:40%;" src="./imgs/floppy.png">
+		</section>
+
+		<section data-transition="slide" id="3d">
+      <h3>Save Button?</h3>
+      <img src="./imgs/3dPrint.jpg">
+		</section>
+
+		<section data-transition="zoom" id="floppy">
+      <h3>Floppy Disk</h3>
+      <img style="width:40%;" src="./imgs/floppy.png">
+		</section>
+
+		<section id="changed">
+		<h2>But things changed!</h2>
+    <img style="width:700px;" src="./imgs/Changed.png">
+		</section>
+
+		<section id="bus">
+    <img src="./imgs/yester.png">
+		</section>
+
+		<section id="changed2">
+		<h3>Increase in</h3>
+    <p>Sources (Users, Clients), Forms</p>
+    <img style="width:700px;" src="./imgs/big-data-sources.png">
+		</section>	
+
+
+		<section id="flood">
+    <h2>Flood is coming</h2>
+    <img style="width:700px;" src="./imgs/Storm.png">
+		</section>
+
+		<section id="frust">
+    <img style="width:700px;" src="./imgs/frust.jpg">
+    <p>MySQL, MariaDB, Access, SQL Server, Oracle<p>
+    <p>Time out on expensive servers...</p>
+		</section>
+
+		<section id="overload">
+    <h2>Overload</h2>
+    <p>You must change your technologies</p>
+    <img style="width:600px;" src="./imgs/donkey-overload.jpg">
+		</section>
+
+    <section id="whatisbigdata">
+    <h2>What makes Big Data</h2>
+		</section>
+
+		<section id="likes">
+    <img style="width:500px;" src="./imgs/like.jpg">
+    <p>Implicit and Explicit</p>  
+		</section>
+
+		<section id="comments">
+    <img style="width:500px;" src="./imgs/comment.png">
+    <p>Forums, Messengers, Comments, Q/A, Reviews</p>  
+		</section>
+
+		<section id="videos">
+    <img style="width:600px;" src="./imgs/video.jpg">
+    <p>Share ...!?</p>
+    <p>Did you just pause that?</p>
+		</section>
+
+		<section id="photos">
+    <img style="width:600px;" src="./imgs/photo.jpg">
+    <p>Share, view, follow</p>
+		</section>
+
+		<section id="perday">
+    <img style="width:600px;" src="./imgs/perday.jpg">
+		</section>
+
+		<section id="visible-parts">
+    <h3>These are only the visible parts of bigdata</h3>
+    <img style="height:500px;" src="./imgs/iceberg.jpg">
+		</section>
+
+		<section id="logs">
+        <h2 class="fragment" data-fragment-index="6">Logs</h2>
+		    <p class="fragment" data-fragment-index="7">Clicks</p>
+		    <p class="fragment" data-fragment-index="1">Applications</p>
+		    <p class="fragment" data-fragment-index="2">Servers (Web, Email, Proxy, ...)</p>
+		    <p class="fragment" data-fragment-index="3">Systems <sub class="fragment highlight-green" data-fragment-index="8" style="font-size:18px">journalct</sub></p>
+		    <p class="fragment" data-fragment-index="4">Hardwares <sub class="fragment highlight-blue" data-fragment-index="9" style="font-size:18px">Access point</sub></p>
+		    <p class="fragment" data-fragment-index="5">Life</p>
+		</section>
+
+		<section id="mainsource">
+    <h3>Main source</h3>
+    <p>Mysterious and valuable part!</p>
+    <img style="height:500px;" src="./imgs/DataSize.png">
+    <!-- https://hadoopilluminated.com/hadoop_illuminated/images/bigdata_pyramid1.png -->
+		</section>
+
+		<section id="socialmedia">
+    <h3>Digital footprint</h3>
+    <img style="height:450px;" src="./imgs/footprint.jpg">
+    <p>A simple tweet</p>
+		</section>
+
+    <section id="howprocess">
+    <h2>How can we process these data?</h2>
+		</section>
+
+    <section id="scale">
+    <h2>Scalability</h2>
+		</section>
+
+		<section id="tower">
+    <img style="height:500px;" src="./imgs/tower.jpg">
+		</section>
+
+		<section id="home">
+    <img style="height:500px;" src="./imgs/home.jpg">
+    <p>Low resistance but inexpensive and infinite</p>
+		</section>
+
+		<section id="scale">
+    <img style="height:500px;" src="./imgs/Scale.png">
+    <p>Organizations</p>
+    <!-- https://interviewbubble.com/what-is-the-difference-between-scaling-horizontally-vs-scaling-vertically-scale-up-vs-scale-out/ -->
+		</section>
+
+    <section id="sature">
+    <h3>Saturation</h3>
+    <img style="height:400px;" src="./imgs/sature.jpg">
+    <p class="fragment highlight-green" data-fragment-index="1">Bottlenecks like: Disk IO, load avg</p>
+    <p style="font-size:18px">No matter how much memory I have...</p>
+    <!-- https://www.slideshare.net/Bull_UK/emc-research-andtechnologyexplosioninscaleoutstorage -->
+		</section>
+
+		<section id="detective">
+    <img style="height:400px;" src="./imgs/detective.png">
+    <p>Now we know what we are looking for!</p>
+		</section>
+
+		<section id="client-server">
+    <h3>Client server architecture</h3>
+    <img style="height:500px;" src="./imgs/client-server.png">
+		</section>
+
+		<section id="raid">
+    <h2>Raid</h2>
+    <img style="height:500px;" src="./imgs/raid5.png">
+		</section>
+
+		<section id="google">
+    <h3>Google</h3>
+    <img style="height:500px;" src="./imgs/google.jpg">
+    <p>GFS, ???</p>
+		</section>
+
+		<section id="doug">
+    <h3>Doug Cutting</h3>
+    <img style="height:300px;" src="./imgs/Doug.jpg">
+    <p>Apache Lucene <sub style="font-size:18px">(IR)</sub></p>
+    <p>Apache Nutch <sub style="font-size:18px">(Web Crawler)</sub></p>
+		</section>
+
+		<section id="paper">
+    <h3>White paper</h3>
+    <img style="height:500px;" src="./imgs/paper.jpg">
+		</section>
+
+		<section id="mapreduce">
+    <h3>MapReduce</h3>
+    <img style="height:450px;" src="./imgs/MapReduce.png">
+    <p>It's just a framework, <a href="https://github.com/prayagsurendran/C4.5-using-hadoop-map-reduce-framework">C4.5</a></p>
+		</section>
+
+		<section id="mapreduce2">
+    <img style="height:600px;" src="./imgs/shahnameh.jpg">
+		</section>
+
+		<section id="intoplay">
+		<h2>Hadoop comes into play!</h2>
+    <img style="height:500px;" src="./imgs/hadoop.png">
+		</section>
+
+		<section id="stuffed">
+		<h2>Naming</h2>
+    <img style="height:500px;" src="./imgs/stuffed.jpg">
+		</section>
+
+    <section id="def">
+		<h2>Hortonworks defination</h2>
+    <p>An opensource software platform for distributed storage
+    and distributed processing of very large data sets on
+    computer clusters built from commodity hardware</p>
+		</section>
+
+		<section id="hadoopcoin">
+		<h2>Two sides of hadoop</h2>
+    <img style="height:400px;" src="./imgs/Hadoop-Coin.png">
+    <p class="fragment" data-fragment-index="1">GFS, MapReduce</p>
+    <p class="fragment" data-fragment-index="2">HDFS, Hadoop MapReduce</p>
+		</section>
+
+		<section id="whatwedo">
+		<h2>What we do with data</h2>
+		</section>		
+
+		<section id="whatwedo2">
+		<h3>What we do with data</h3>
+		<ul>
+      <li>Save</li>
+      <li>Transfer</li>
+      <li>Join</li>
+      <li>Index</li>
+      <li>Analytics</li>
+      <li>Aggregate</li>
+      <li>Visualize</li>
+    </ul>
+		</section>
+
+		<section id="ecosystem">
+		<h2>Ecosystem</h2>
+    <img style="height:500px;" src="./imgs/ecosystem.png">
+		</section>
+
+		<section id="ecosystem1">
+		<h2>Ecosystem</h2>
+    <img style="height:450px;" src="./imgs/ecosystem/core.png">
+      <span style="font-size:13px;">      
+      <a href="#basic-hdfs">HDFS</a> | 
+      <a href="#basic-yarn">YARN</a> | 
+      <a href="#basic-mapreduce">MapReduce</a> | 
+      <a href="#pig">Pig</a> | 
+      <a href="#hive">Hive</a> | 
+      <a href="#tez">TEZ</a> | 
+      <a href="#storm">Storm</a> |  
+      <a href="#spark">Spark</a> | 
+      <a href="#oozie">oozie</a> | 
+      <a href="#zookeeper">Zookeeper</a> | 
+      <a href="#others">Others</a>
+      </span>
+		</section>
+
+		<section id="basic-hdfs">
+		<h2>HDFS</h2>
+    <p>
+      Allows us to distribute the storage<br/>
+      All hard drives look likes a single huge hard disk<br/>
+      Keeps copy of data<br/>
+      No single point of failure<br/>
+      <a style="margin-top:10px; font-size:14px;" href="#ecosystem1">Back</a>
+    </p>
+		</section>
+
+    <section id="basic-yarn">
+		<h2>YARN</h2>
+    <p>
+    Manage the resouces<br/>
+    What get to run tasks and when<br/>
+    Which node is available<br/>
+    We build applications on top of it<br/>
+    <a style="margin-top:10px; font-size:14px;" href="#ecosystem1">Back</a>
+    </p>
+    </section>	
+
+    <section id="basic-mapreduce">
+		<h2>MapReduce</h2>
+    <p>
+    Got remvoed from YARN
+    </p>
+    <a style="margin-top:10px; font-size:14px;" href="#ecosystem1">Back</a>
+    </section>	
+
+    <section id="pig">
+		<h2>Pig</h2>
+    <p>
+    No java, Python? Scripting language like SQL
+    <br/>
+    Transforms the script to something than can be run on MapReduce
+    </p>
+    <a style="margin-top:10px; font-size:14px;" href="#ecosystem1">Back</a>
+    </section>	
+
+    <section id="hive">
+		<h2>Hive</h2>
+    <p>
+      SQL<br/>
+      Makes the data to look like a RDBMS
+    </p>
+    <a style="margin-top:10px; font-size:14px;" href="#ecosystem1">Back</a>
+    </section>	
+
+
+    <section id="tez">
+		<h2>TEZ</h2>
+    <p>
+      Hive on TEZ is faster than MapReduce
+    </p>
+    <a style="margin-top:10px; font-size:14px;" href="#ecosystem1">Back</a>
+    </section>	
+
+
+    <section id="spark">
+		<h2>Spark</h2>
+    <p>
+      Sitting at same level of MapReduce on top of YARN Or MESOS</br>
+      Python, Java, Scala</br>
+      Fast </br>
+      Active development </br>
+      Handle SQL Query </br>
+      Machine learning </br>
+      Handle Stream data </br>
+    </p>
+    <a style="margin-top:10px; font-size:14px;" href="#ecosystem1">Back</a>
+    </section>	
+
+
+    <section id="storm">
+		<h2>Storm</h2>
+    <p>
+      Processing streaming data</br>
+      Sensors, Logs</br>
+      Spark streaming does the same thing</br>
+      Update machine learning model</br>
+      Update data as it comes
+
+    </p>
+    <a style="margin-top:10px; font-size:14px;" href="#ecosystem1">Back</a>
+    </section>	
+
+
+    <section id="oozie">
+		<h2>oozie</h2>
+      <h3>Schedule of jobs</h3>
+    <p>
+      Complicated steps<br/>
+      Load to hive, Query using spark then transform to HBASE.
+    </p>
+    <a style="margin-top:10px; font-size:14px;" href="#ecosystem1">Back</a>
+    </section>	
+
+
+    <section id="zookeeper">
+		<h2>Zookeeper</h2>
+    <p>
+      Cordinates everything on clusters<br/>
+      Which node is up or down<br/>
+      Many of these apps relay on zookeeper
+    </p>
+    <a style="margin-top:10px; font-size:14px;" href="#ecosystem1">Back</a>
+    </section>	
+
+
+    <section id="others">
+		<h2>Data Ingestion</h2>
+    <h3>Sqoop</h3>
+    <p>Turn into hadoop, talks to ODBS JDBC</p>
+    <h3>Flume</h3>
+    <p>Transport Web logs into hadoop (spark, storm)</p>
+    <h3>Kafka</h3>
+    <p>Like flume but more general, cluster of PC or webservers or whatever to broadcast into Hadoop cluster.</p>
+    <a style="margin-top:10px; font-size:14px;" href="#ecosystem1">Back</a>
+    </section>	
+
+
+
+    <section id="dists">
+		<h2>Distributions</h2>
+    <img style="height:450px;" src="./imgs/dists.png">
+		</section>
+
+
+    <section id="sandbox">
+		<h2>Hortonworks Sandbox</h2>
+    <img style="height:450px;" src="./imgs/sandbox.png">
+		</section>
+
+
+		<section id="hive-example">
+		<h1>An Hive example</h1>
+		</section>		
+
+		<section id="tty">
+		<h3>TTY</h3>
+    <img style="height:450px;" src="./imgs/hive/0tty.jpg">
+		</section>		
+
+    <section id="ambari">
+		<h2>Apache Ambari</h2>
+    <img style="height:450px;" src="./imgs/ambari.png">
+		</section>
+
+		<section data-background-image="./imgs/hive/1hive.jpg" id="hive1"></section>
+		<section data-background-image="./imgs/hive/2upload.jpg" id="hive2"></section>
+		<section data-background-image="./imgs/hive/3ratings.jpg" id="hive3"></section>
+		<section data-background-image="./imgs/hive/4movienames.jpg" id="hive4"></section>
+		<section data-background-image="./imgs/hive/5query_top.jpg" id="hive5"></section>
+		<section data-background-image="./imgs/hive/6visualize.jpg" id="hive6"></section>
+
+		<section id="hive7">
+    <h2>Data visualizer</h2>
+    <img style="height:450px;" src="./imgs/hive/7visualize2.jpg">    
+    </section>
+
+		<section id="hive8">
+    <h2>Star Wars</h2>
+    <img style="height:450px;" src="./imgs/hive/8get-name.jpg">
+    </section>
+
+		<section id="ryarn">
+    <img style="width:30%;" src="./imgs/hy.jpg">
+    <p class="fragment" data-fragment-index="1">Complicated stuff, we don't have to worry about the details</p>
+    <p class="fragment" data-fragment-index="2">Hadoop V2 separated from MapReduce</p>
+    <p class="fragment" data-fragment-index="3">Run MapReduce alternatives on it (TEZ)</p>
+    <p class="fragment" data-fragment-index="4">Idea? split the computation across the cluster</p>
+    <p class="fragment" data-fragment-index="5">Maintain data locality (Integrated with HDFS, where data lives)</p>
+		</section>
+
+		<section id="ryarn2">
+      <h3>YARN</h3>
+      <img style="width:100%;" src="./imgs/where-tez.jpg">
+		</section>
+
+		<section id="ryarn3">
+      <h3>YARN</h3>
+      <img style="width:100%;" src="./imgs/yarn-dia.jpg">
+      <p class="fragment fade-up">We can have multiple resource manager</p>
+		</section>
+
+
+		<section id="tez">
+      <h3>TEZ (Still YARN)</h3>
+      <img style="width:100%;" src="./imgs/tez-performance.jpg">
+		</section>
+
+
+		<section id="rhdfs">
+    <img style="width:30%;" src="./imgs/hh.jpg">
+    <p class="fragment" data-fragment-index="1">Allow our big data to be stored across entire cluster in distributed and reliable manner.</p>
+    <p class="fragment" data-fragment-index="2">Handling large files</p>
+    <p class="fragment" data-fragment-index="3">Breaking data into blocks - 128 MB</p>
+    <p class="fragment" data-fragment-index="4">Keeps multiple copies of these blocks (Clever way)</p>
+    <p class="fragment" data-fragment-index="5">Allow us to use regular computers (No special hardware needed)</p>
+		</section>
+
+		<section id="rhdfs2">
+     <h3>HDFS</h3>
+     <img style="width:70%;" src="./imgs/nameNode.jpg">
+		</section>
+
+		<section id="rhdfs2">
+     <h3>HA HDFS</h3>
+     <img style="width:70%;" src="./imgs/HAHDFS.png">
+     <p>Client <--- > Zookeeper</p>
+     <p>One namenode is active at a time</p>
+		</section>
+
+		<section id="rhdfs3">
+     <h3>HDFS Federation</h3>
+     <img style="width:70%;" src="./imgs/federation.png">
+     <p>Sub Directories -> namespace Volume -> each namenode manage one namespace volume <span class="fragment highlight-blue"> (dumpe2fs)<span></p>
+		</section>
+
+		<section id="ssh">
+     <img style="width:20%;" src="./imgs/ssh.png">
+		</section>
+
+
+		<section id="rmapreduce" data-transition="zoom">
+    <img style="width:30%;" src="./imgs/hmr.png">
+    <p class="fragment" data-fragment-index="1">Map: Transfer Data that we care about</p>
+    <p class="fragment" data-fragment-index="3">Shuffle and sort</p>
+    <p class="fragment" data-fragment-index="2">Reduce: Aggregate Data</p>
+		</section>
+
+  	<section id="rmapreduce2">
+     <img style="width:70%;" src="./imgs/MRE.jpg">
+		</section>
+
+  	<section id="rmapreduce3">
+     <img style="width:80%;" src="./imgs/behind.jpg">
+		</section>
+
+  	<section id="rmapreduce4" data-transition="zoom">
+     <img style="width:80%;" src="./imgs/python/python-map.jpg">
+		</section>
+
+  	<section id="rmapreduce5">
+     <img style="width:80%;" src="./imgs/python/python-reduce.jpg">
+		</section>
+
+  	<section id="rmapreduce6">
+     <img style="width:80%;" src="./imgs/python/python-whole.jpg">
+		</section>
+
+  	<section id="stallman" data-transition="zoom">
+     <img style="width:80%;" src="./imgs/stallman.jpeg">
+		</section>
+	</div>
+</div>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+ 
+<script>
+// Required, even if empty.
+Reveal.initialize({
+    // Transition style
+    transition: 'concave', // none/fade/slide/convex/concave/zoom
+    controls: false,
+    showNotes: true,
+/*
+    // Display controls in the bottom right corner
+    controls: false,
+
+    // Display a presentation progress bar
+    progress: true,
+
+    // Display the page number of the current slide
+    slideNumber: false,
+
+    // Push each slide change to the browser history
+    history: false,
+
+    // Enable keyboard shortcuts for navigation
+    keyboard: true,
+
+    // Enable the slide overview mode
+    overview: true,
+
+    // Vertical centering of slides
+    center: true,
+
+    // Enables touch navigation on devices with touch input
+    touch: true,
+
+    // Loop the presentation
+    loop: false,
+
+    // Change the presentation direction to be RTL
+    rtl: false,
+
+    // Randomizes the order of slides each time the presentation loads
+    shuffle: false,
+
+    // Turns fragments on and off globally
+    fragments: true,
+
+    // Flags if the presentation is running in an embedded mode,
+    // i.e. contained within a limited portion of the screen
+    embedded: false,
+
+    // Flags if we should show a help overlay when the questionmark
+    // key is pressed
+    help: true,
+
+    // Flags if speaker notes should be visible to all viewers
+    showNotes: false,
+
+    // Number of milliseconds between automatically proceeding to the
+    // next slide, disabled when set to 0, this value can be overwritten
+    // by using a data-autoslide attribute on your slides
+    autoSlide: 0,
+
+    // Stop auto-sliding after user input
+    autoSlideStoppable: true,
+
+    // Use this method for navigation when auto-sliding
+    autoSlideMethod: Reveal.navigateNext,
+
+    // Enable slide navigation via mouse wheel
+    mouseWheel: false,
+
+    // Hides the address bar on mobile devices
+    hideAddressBar: true,
+
+    // Opens links in an iframe preview overlay
+    previewLinks: false,
+
+    // Transition style
+    transition: 'concave', // none/fade/slide/convex/concave/zoom
+
+    // Transition speed
+    transitionSpeed: 'default', // default/fast/slow
+
+    // Transition style for full page slide backgrounds
+    backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+    // Number of slides away from the current that are visible
+    viewDistance: 3,
+
+    // Parallax background image
+    parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+    // Parallax background size
+    parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+
+    // Number of pixels to move the parallax background per slide
+    // - Calculated automatically unless specified
+    // - Set to 0 to disable movement along an axis
+    parallaxBackgroundHorizontal: null,
+    parallaxBackgroundVertical: null
+*/
+});
+</script>
+</body>
+</html>
