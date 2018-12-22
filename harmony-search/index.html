@@ -1,0 +1,533 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Harmony Search - Milad As (Ravexina) - milad@tuxgeek.ir</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link id="theme" rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+			  <!-- Configuration -->
+			  <section>
+			    <section><h2>Configuration?</h2></section>
+			  	<section id="transitions">
+					  <h2>Transition Styles</h2>
+					  <p>
+						  <a href="?transition=none#/transitions">None</a> -
+						  <a href="?transition=fade#/transitions">Fade</a> -
+						  <a href="?transition=slide#/transitions">Slide</a> -
+						  <a href="?transition=convex#/transitions">Convex</a> -
+						  <a href="?transition=concave#/transitions">Concave</a> -
+						  <a href="?transition=zoom#/transitions">Zoom</a>
+					  </p>
+  				</section>
+
+			  	<section id="themes">
+					  <h2>Themes</h2>
+					  <p>
+						  <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
+						  <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
+						  <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
+						  <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
+						  <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
+						  <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
+						  <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
+						  <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
+						  <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
+						  <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
+						  <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
+					  </p>
+				  </section>
+
+			  </section>
+			  <!-- Configuration End -->				
+				
+				<section>
+				  <h2>𝄞  Music is a language 𝄞</h2>
+				  <aside class="notes">یک زبان چه قابلیت هایی داره؟</aside>
+				</section>
+				
+				<section>
+				  <h3>Talk</h3>
+		  		<img style="width:70%" src="img/talk.jpg" />
+				  <aside class="notes">باهاش صحبت کرد</aside>
+				</section>
+
+				<section>
+  				<h3>Hear</h3>
+		  		<img style="width:60%" src="img/hear.png" />
+				  <aside class="notes">شنید و فهمیدش</aside>
+				</section>
+				
+			  <section>
+			    <h3></h3>
+	    		<img style="width:50%" src="img/chopin.jpg" />
+			    <aside class="notes">فردریک شوپن</aside>
+			  </section>
+				
+				<section>
+				  <h3>See</h3>
+		  		<img style="width:70%" src="img/see.jpg" />
+				  <aside class="notes">حتی دیدش، کافیه چشم ها رو بست و تصور کرد</aside>
+				</section>
+		
+			  <section>
+			    <h3>Communication</h3>
+	    		<img style="width:70%" src="img/communication.jpg" />
+			    <aside class="notes">به طور کلی راهی برای ارتباط</aside>
+			  </section>  
+			  
+			  <section>
+			    <h3>Emotions</h3>
+	    		<img style="width:70%" src="img/emotions.jpg" />
+			    <aside class="notes"> یا بیانی برای احساسات باشه</aside>
+			  </section>
+			  
+			  <section>
+			    <h3>It's not always soft!</h3>
+	    		<img style="width:70%" src="img/soft.jpg" />
+			    <aside class="notes">ما یا موسیقی دان همیشه دنبال حس یا انتقال آرامش نیستیم <br><br> ما همیشه خوشحال یا ناراحت نیستیم</aside>
+			  </section>
+
+			  <section>
+	    		<h3>Soft but ...</h3>
+	    		<img style="width:70%" src="img/softness.jpg" />
+			    <aside class="notes">در عین حال که می‌تونه ملایم باشه میتونه بیان سایر عواطف باشه</aside>
+			  </section>
+			  
+			  <section>
+			    <h3>Feel the anger...</h3>
+	    		<img style="width:70%" src="img/yelling.jpg" />
+			    <aside class="notes">خشم، نفرت، اضطراب، شکست یا پیروزی، امید، انگیزه، ترس، یا هر حس دیگر، انتقاد</aside>
+			  </section>
+			  
+			  <section>
+				  <h2>𝄞  Still a language 𝄞</h2>
+				  <aside class="notes"></aside>
+				</section>
+				
+			  <section>
+			    <h3>Alphabet</h3>
+	    		<img style="width:70%" src="img/alphabet.jpg" />
+			    <aside class="notes">برای ثبت و نگارش یک زبان نیاز به الفبا داریم</aside>
+			  </section>
+			  
+			  <section>
+			    <h3>Notes</h3>
+	    		<img style="width:70%" src="img/notes.jpg" />
+			    <aside class="notes">نت‌ها : الفبای موسیقی <br> هفت نت پایه داریم</aside>
+			  </section>
+			  
+			  
+				<section>
+          <h3>do re mi fa sol la si</h3>
+  				<img style="width:90%" src="img/do-re-mi.png" />
+			    <aside class="notes">
+			    AB, CD, DE, FG, GA<br>
+			    Order: French, English, Germans<br>
+			    American 1800, si -> ti<br><br>
+			    SI: Romance languages:<br>
+			    (French, Spanish, Portuguese, Italian)<br><br>
+			    TI: Germany, Austria, Switzerland, South Tyrol (Italy)<br>
+			    </aside>
+				</section>
+				
+				
+				<section>
+          <h3>Scale</h3>
+  				<img style="width:70%" src="img/scale.jpg" />
+			    <aside class="notes">تونالیته: نوت  پایه شروع گام
+			    <br>مبنی نگارش sol - خط دوم - Clef - حامل - staff
+			    <br> هشت نوت جلو بریم از پایه، یک گام ایجاد میشه، گام هشتایی
+			    <br> گام پنتاتونیک
+			    <br>مدالیته: الگو / مدل
+			    <br>ماژور، مینور
+			    <br>بالارونده یا پایین رونده
+          <br>si la sol fa mi re do si
+			    </aside>
+		      <!-- https://www.studybass.com/using-the-site/american-english-music-terminology/ -->
+				</section>
+				  
+			  <section>
+			    <h3>Pitch</h3>
+	    		<img style="width:70%" src="img/pitch.jpg" />
+			    <aside class="notes">How High or Low a note is (Frequency)</aside>
+			  </section>
+			  
+			  <section>
+			    <h3></h3>
+	    		<img style="width:90%" src="img/rock.jpg" />
+			    <aside class="notes">تاثیر موزارت و بتهون روی موسیقی راک‍</aside>
+			  </section>
+			   
+			  <section>
+			    <h2>Harmony Search Algorithm</h2>
+	    		<img style="width:35%" src="img/composer.jpg" />
+	    		<p style="font-size:22px; color:#7FFFD4; font-family: ubuntu">Milad As (Ravexina)<br>
+	    		<span style="color:#999; font-size:18px; margin-top:10px">Dec 2018</span></p>
+			    <aside class="notes">توضیحات همیشگی
+			    <br>مسائل بهینه یابی و اهمیت‌اشون در جامعه کنونی
+			    <br>مشکلات سایر الگوریتم ها
+			    <br>DP: Increase in vars = exponentially increase recursive functions
+			    <br>NLP: Differentiable
+			    <br>Near optimom solution, reasonable time, reasonable memory usage
+			    <br>Rules, Randomness
+			    </aside>
+			  </section>
+			  
+			  <!--V-Section-->
+			  <section>
+			    
+			    <section>
+			      <h3>Same old usual things</h3>
+	      		<img style="width:70%" src="img/same-old.jpg" />  
+		        <aside class="notes">
+			      <br>مسائل بهینه یابی و اهمیت‌اشون در جامعه کنونی
+			      <br>مشکلات سایر الگوریتم ها
+			      <br>DP: Increase in vars = exponentially increase recursive functions
+			      <br>NLP: Differentiable
+			      </aside>
+		      </section>
+			    
+				  <section>
+		        <h3>Same old usual things</h3>
+		        <p class="fragment fade-up">Near optimom solution <br> Reasonable time <br> Reasonable memory usage</p>
+		        <p class="fragment fade-up">Rules, Randomness</p>
+            <p class="fragment fade-up">SA, GA, Tabu</p>
+		        <aside class="notes">تابو: از نظر اجتماع، مذهب و ... شنیع محسوب شود
+		        <br>جستجوی فضای مسئله برای تمام جواب های ممکن
+		        <br>به واسطه توالی حرکات- یک جواب به جواب دیگر
+		        <br>تولید بهترین جواب
+		        <br>فرار از بهینه محلی یا حلقه
+		        <br>برخی حرکات تابو محسوب می‌شوند.
+		        <br>بر اساس تاریخه توالی حرکات
+		        </aside>
+		      </section>
+
+
+			    <section>
+			      <h4>Is it possible to develop a new heuristic algorithm with better performance</h4>
+			      <p class="fragment fade-right cyan">Better solutions!</p>
+			      <p class="fragment fade-left">Fewer iterations!</p>
+			      <p class="fragment fade-down">Than existing heuristic algorithms?</p>
+			      <aside class="notes">Now it is time to ask a question.</aside>
+			    </section>
+			    
+			  
+			    <section>
+			      <h4>Music is one of the most satisfying processes generated by human endeavors</h4>
+			      <p class="fragment fade-right">A new heuristic algorithm derived from an artificial phenomenon found in musical performance
+			       namely the process of <span class="fragment highlight-green">"searching for better harmony"</span>, can be introduced.</p>
+			      <aside class="notes">نشات گرفته از پدیده ساختگی - به نام
+			      <br>endeavors: work hard to make it happen
+			      </aside>
+			    </section>
+			    
+			  </section>
+			  <!--END V-Section-->
+
+			  <section>			  
+		      <h3>Melody</h3>
+      		<img style="width:35%" src="img/melody.png" />
+      		<p>A sequence of single notes that is musically satisfying.</p>
+		      <aside class="notes"></aside>
+		    </section>
+			    
+			    			  
+			  <!--V-Section-->
+			  <section>
+
+  			  <section>
+		        <h3>Harmony</h3>
+        		<img style="width:60%" src="img/harmony.jpg" />
+        		<p>When 2 or more notes play together at the same time in “harmony” with each other.</p>
+		        <aside class="notes">به معنی واقعی کلمه: توازن و هم آهنگی و تطبیق
+		        <br>کورد درواقع مشابه هارممونی هست 
+            <br>کورد هارمونی میسازه چون سه یا بیشتر نوت هست که طی یک فاصله زمانی مشخص اجرا می‌شند
+		        </aside>
+		      </section>
+		      
+			    <section>
+			      <h3>Harmony</h3>
+			      <p>Music harmony is a combination of sounds considered pleasing from an aesthetic point of view.</p>
+			    </section>
+			    
+			  </section>
+			  <!--END V-Section-->
+			  
+			  <!--V-Section-->
+			  <section>
+			    <section>
+			      <h3>Fantastic Harmony</h3>
+              <p>Musical performances<br> seek a best state determined by aesthetic estimation!</p>
+              <p>Optimization algorithms seek a best state.</p>
+			      <aside class="notes"></aside>
+			    </section>
+			    
+			    <section>
+			      <h3>Best state?</h3>
+			      <p class="fragment fade-right">Global optimum</p>
+			      <p class="fragment fade-left">Minimum cost</p>
+			      <p class="fragment fade-down">Maximum benefit</p>
+			      <p class="fragment fade-up">Determined by objective function</p>
+			      <aside class="notes"></aside>
+			    </section>	
+			    
+			    
+			    <section>
+			      <h3>Sounds can be improved for better aesthetic estimation</h3>
+			      <p class="fragment fade-right">Through practice after practice</p>
+			      <aside class="notes"></aside>
+			    </section>
+
+			    <section>
+			      <h3>Values for better objective function evaluation can be improved</h3>
+			      <p class="fragment fade-left">Iteration by iteration</p>
+			      <aside class="notes"></aside>
+			    </section>
+			    
+			    <section>
+			      <h5>comparison between optimization and musical performance</h5>
+  	    		<img style="width:100%" src="img/table1.png" />
+			      <aside class="notes"></aside>
+			    </section>			    		  
+			  </section>
+			  <!--END V-Section-->
+		   
+			  <section>
+			    <h3>Steps in the procedure of HS are as follows:</h3>
+			    <aside class="notes"></aside>
+			  </section>
+			  
+	  		<section data-transition="slide">
+  		    <h4>Step 1. Initialize a Harmony Memory (HM).</h4>
+		    </section>
+		    
+		    <section data-transition="slide">
+  		    <h4>Step 2. Improvise a new harmony from HM.</h4>
+		    </section>
+		    
+		    <section data-transition="slide">
+  		    <h4>Step 3. If the new harmony is better than minimum
+          harmony in  HM, include the new harmony in HM,
+          and exclude the minimum harmony from HM.</h4>
+		    </section>
+		    
+		    <section data-transition="slide">
+  		    <h4>Step 4. If stopping criteria are not satisfied, go to step 2.</h4>
+		    </section>
+		    
+			  <section>
+			    <h3></h3>
+	    		<img style="width:70%" src="img/f1.png" />
+			    <aside class="notes">
+			      -.Random init<br>
+			      -.Sort by aesthetic estimation<br>
+			      -.Choose from HM<br>
+			      -.Same chance: 33.333%<br>
+			      -.Exchange worst with improvised if it's better than of worst<br>
+			      -.Keep doing until satisfied
+			    </aside>
+			  </section>
+			  
+			  <section>
+			    <h3>Consider this simple example</h3>
+	    		<img style="width:70%" src="img/min.jpg" />
+			    <aside class="notes">	    
+			    </aside>
+			  </section>
+
+			  <section>
+			    <h3></h3>
+	    		<img style="height:300px" class="fragment fade-right" data-fragment-index="1" src="img/f2a.png" />
+	    		<img style="height:300px" class="fragment fade-right" data-fragment-index="2" src="img/f2b.png" />
+			    <aside class="notes">
+			      - Initialize
+			      - Improvise (1,2,3)
+			      - Exchange (5,3,3)
+			      - Iterate until (2,3,1)<br>
+			    </aside>
+			  </section>
+			  
+			  <section>
+			    <h3>Problem!</h3>
+	    		<img style="width:70%" src="img/problem.jpg" />
+			    <aside class="notes">مشکل چیه به نظرتون؟
+			    <br>فرض این بوده تمام قسمت های سازنده جواب بهینه تو مموری هستش
+			    </aside>
+			  </section>
+	
+			  <section>
+			    <h3>HMCR</h3>
+	    		<img style="width:70%" src="img/solution.jpg" />
+	    		<p class="fragment fade-right">Harmony memory consideration rate</p>
+			    <aside class="notes">
+			      Rules? Randomness?<br>
+			      Random number, 0-1<br>
+			      Above HMCR: random selection (Possible values, Notes)<br>
+			      HMCR: 0.95 : 95% HM
+			    </aside>
+			  </section>		    		
+			  		    		
+			  <section>
+			    <h3>PAR</h3>
+	    		<img style="width:70%" src="img/par.jpg" />
+	    		<p class="fragment fade-right">[1, 2, 4, {6}, 7, 9]</p>
+			    <aside class="notes">
+			      Escape local optimal?<br>
+			      Random number, 0-1<br>
+			      Above PAR: Do not ajdust<br>
+			      PAR: 0.1 : 10% Adjust
+			    </aside>
+			  </section>
+		
+			  <section>
+			    <h3>An Example</h3>
+			    <p>Possible values of an instrument (a variable) is:<br> {C, D, E, F, G}</p>
+			    <p>HMCR is 0.95, PAR is 0.10<br>The instrument now has: {C, E, G} in HM.</p>
+			    <aside class="notes">95% From C,E,G <br>
+			    5% From {C, D, E, F, G}<br>
+			    When {E} is chosen: E Can be shifted to {D} or {F} with 10% probability.
+			    </aside>
+			  </section>    		
+    		    
+			  <section>
+			    <h3>All In One</h3>
+	    		<img style="width:70%" src="img/HM.jpg" />
+			    <aside class="notes">اکثر نمونه ها ناقص هستند</aside>
+			  </section>
+
+			  <section>
+			    <h3>Basic Flowchart</h3>
+	    		<img style="width:50%" src="img/basic-fc.png" />
+			    <aside class="notes"></aside>
+			  </section>
+			  	
+			  <section>
+			    <h4>HS incorporates the structure of existing heuristic methods.</h4>
+			    <p class="fragment fade-right">Preserve history of past vectors</p>
+			    <p class="fragment fade-right">Vary HMCR</p>
+			    <p class="fragment fade-right">Manages several vectors simultaneously</p>
+			    <aside class="notes">
+			      Vector: Harmony<br>
+			      History: Tabou<br/>
+			      HMCR: SA<br>
+			      Vectors: GA<br><br>
+			      HS makes a new vector from all the existing vectors (GA two)
+			      <br><br>
+			      HS can independently consider As each component variable in a vector while it generates a new vector (GA can't, should keep struction of gene)
+			    </aside>
+			  </section>
+			  
+			  <section>
+			    <h4>Results obtained from various HS applications</h4>
+	    		<img style="width:90%" src="img/compare.png" />
+			    <aside class="notes"></aside>
+			  </section>
+			  
+			  <section>
+			    <h3>Any question?</h3>
+	    		<img style="width:70%" src="img/question.jpg" />
+			    <aside class="notes">اگر سوالی نیست بریم کد</aside>
+			  </section>
+			
+			  <section>
+			    <h3>Code</h3>
+	    		<img style="width:70%" src="img/code.png" />
+			    <aside class="notes"></aside>
+			  </section>
+			    
+			  <section>
+			    <h3>Min</h3>
+	    		<img style="width:70%" src="img/min.png" />
+			    <aside class="notes"></aside>
+			  </section>
+			  
+			  <section>
+			    <h3>TSP</h3>
+	    		<img style="width:70%" src="img/star.png" />
+			    <aside class="notes"></aside>
+			  </section>
+			  
+        <section>
+			    <h3>TSP Results</h3>
+	    		<img style="width:70%" src="img/tsp2.png" />
+			    <aside class="notes"></aside>
+			  </section>
+			  
+			  <section>
+			    <h3>Reference:</h3>
+          <p>Geem, Zong W. Kim, Joong H. Loganathan, G.V.
+           "A New Heuristic Optimization Algorithm: Harmony Search." Simulation [USA] 2001. Print.</p>
+			    <aside class="notes"></aside>
+			  </section>
+			  
+			  <section>
+			    <h3>Thank you for your attention</h3>
+	    		<img style="width:70%" src="img/bored.jpg" />
+			    <aside class="notes"></aside>
+			  </section>
+			  
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			
+			// Shows the slide number using default formatting
+      Reveal.configure({  });
+
+      // Slide number formatting can be configured using these variables:
+      //  "h.v": 	horizontal . vertical slide number (default)
+      //  "h/v": 	horizontal / vertical slide number
+      //    "c": 	flattened slide number
+      //  "c/t": 	flattened slide number / total slides
+			Reveal.configure({ 
+			  slideNumber: true,
+			  slideNumber: 'c'
+			});
+			
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+        
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
